@@ -45,7 +45,7 @@ export class JestTestFramework extends BaseTestFramework {
         try {
             return rewire(path.join(path.dirname(require.resolve('jest-cli')), 'cli'));
         } catch {
-            return rewire(path.join(path.dirname(path.dirname(require.resolve('jest'))), 'node_modules', 'jest-cli', 'build', 'cli'));
+            return rewire(path.join(path.dirname(path.dirname(require.resolve('jest'))), 'node_modules', 'jest-cli', 'build', 'index'));
         }
     }
 
