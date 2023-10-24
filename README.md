@@ -1,30 +1,26 @@
-[![Build Status](https://dev.azure.com/karanjitsingh/jstestadapter/_apis/build/status/JSTestAdapter%20Build?branchName=master)](https://dev.azure.com/karanjitsingh/jstestadapter/_build/latest?definitionId=4&branchName=master)
-[![npm version](https://img.shields.io/npm/v/jstestadapter/latest.svg?label=npm&style=flat)](https://www.npmjs.com/package/jstestadapter)
-[![npm version](https://img.shields.io/npm/v/jstestadapter/beta.svg?style=flat)](https://www.npmjs.com/package/jstestadapter)
+# jstestadapter2
 
-# jstestadapter
-
-jstestadapter is a JavaScript test adapter extension for [Visual Studio Test Platform](https://github.com/Microsoft/vstest). jstest with vstest can be used as a command line tool to run tests written in mocha, jasmine or jest.
+jstestadapter2 is a JavaScript test adapter extension for [Visual Studio Test Platform](https://github.com/Microsoft/vstest). jstest with vstest can be used as a command line tool to run tests written in mocha, jasmine or jest.
 
 > This fork addresses a path related bug when using jstestadapter with jest V29. There is no planed maintenance beyond this one bug fix.
 
 ### Install
 
 ```bash
-npm install --save-dev jstestadapter
+npm install --save-dev jstestadapter2
 ```
 
 ### Usage
 
 ```bash
 # Testing with default test framework, Jasmine
-path/to/vstest.console.exe --TestAdapterPath:./node_modules/jstestadapter/ path/to/test.1.js path/to/test.2.js
+path/to/vstest.console.exe --TestAdapterPath:./node_modules/jstestadapter2/ path/to/test.1.js path/to/test.2.js
 
 # Testing with Mocha
-path/to/vstest.console.exe --TestAdapterPath:./node_modules/jstestadapter/ path/to/test.1.js path/to/test.2.js -- JSTest.TestFramework=Mocha
+path/to/vstest.console.exe --TestAdapterPath:./node_modules/jstestadapter2/ path/to/test.1.js path/to/test.2.js -- JSTest.TestFramework=Mocha
 
 # Running tests with jest
-path/to/vstest.console.exe --TestAdapterPath:./node_modules/jstestadapter/ path/to/package.json -- JSTest.TestFramework=Jest
+path/to/vstest.console.exe --TestAdapterPath:./node_modules/jstestadapter2/ path/to/package.json -- JSTest.TestFramework=Jest
 ```
 
 ### RunSettings Configuration
@@ -105,13 +101,3 @@ For uploading test result attachments along with tests checkout [karanjitsingh/j
 | -vstest        | \path\to\custom\vstest.console.exe | Path to vstest.console.exe              | D:\vstest\artifacts\Debug\net451\win7-x64\vstest.console.exe  |
 
 ---
-
-##### Tested with framework versions
-
-![npm (tag)](https://img.shields.io/npm/v/jasmine/latest.svg?label=jasmine%40latest)<br />
-![npm (tag)](https://img.shields.io/npm/v/mocha/latest.svg?label=mocha%40latest)<br />
-![npm (tag)](https://img.shields.io/npm/v/jest/latest.svg?label=jest%40latest)
-
-###### Used and loved by
-
-[![Azure Pipelines](https://user-images.githubusercontent.com/4632805/51794131-3c5c6080-21f2-11e9-9173-0ccbb3418252.png)](https://dev.azure.com/)

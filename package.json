@@ -1,6 +1,6 @@
 {
   "name": "jstestadapter2",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "",
   "bundledDependencies": [
     "rewire",
@@ -23,8 +23,8 @@
   "scripts": {
     "lint": "tslint --project ./src/JSTest.Runner/tsconfig.json",
     "lint:test": "tslint --project ./test/JSTest.Runner.UnitTests/tsconfig.json",
-    "build:Debug": "./node_modules/.bin/tsc -p ./src/JSTest.Runner/tsconfig.json",
-    "build:Release": "./node_modules/.bin/tsc -p ./src/JSTest.Runner/tsconfig.json --outDir ./src/JSTest.Runner/bin/Release",
+    "build:Debug": "tsc -p ./src/JSTest.Runner/tsconfig.json",
+    "build:Release": "tsc -p ./src/JSTest.Runner/tsconfig.json --outDir ./src/JSTest.Runner/bin/Release",
     "tsc:test": "node_modules/.bin/tsc -p ./test/JSTest.Runner.UnitTests/tsconfig.json",
     "build:test": "npm run lint:test && npm run tsc:test",
     "build": "npm run build:Debug",
